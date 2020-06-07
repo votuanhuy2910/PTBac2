@@ -1,0 +1,43 @@
+#include <iostream>
+#include <stdio.h>
+#include <math.h>
+using namespace std;
+int main(){
+    int a,b,c,d;
+    float x,y,z;
+    cin>>a;
+    cin>>b;
+    cin>>c;
+    if(a==0){
+        if(b==0){
+            if(c==0){
+                cout<<"VSN";
+            }
+            else{
+                cout<<"VN";
+            }
+        }
+        else{
+            x=(float)-c/b;
+            printf("%.4f",x);
+    }
+}
+else{
+    d=b*b-4*a*c;
+    if(d>0){
+        y=(-b+sqrt(d))/(2*a);
+        z=(-b-sqrt(d))/(2*a);
+        printf("%.4f\n",y);
+        printf("%.4f",z);
+    }
+    else if(d==0){
+        y=z=-b/(2*a);
+        printf("%.4f\n",y);
+        printf("%.4f",z);
+    }
+    else if(d<0){
+        cout<<"VN";
+    }
+}
+    return 0;
+    }
